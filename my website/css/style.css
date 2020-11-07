@@ -1,0 +1,492 @@
+.main_h {
+    position: fixed;
+    top: 0px;
+    max-height: 80px;
+    z-index: 999;
+    width: 100%;
+    padding-top: 10px;
+    background: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    top: -100px;
+    padding-bottom: 6px;
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 5px 1px rgba(16, 16, 16, 0.05);
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h {
+        padding-top: 25px;
+    }
+}
+
+.open-nav {
+    max-height: 400px !important;
+}
+
+.open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.sticky {
+    opacity: 1;
+    top: 0px;
+    /*    border-bottom: 1px solid gainsboro;*/
+}
+
+.logo {
+    float: left;
+    width: 9%;
+    height: auto;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 766px) {
+    .logo {
+        float: none;
+    }
+}
+
+nav {
+    float: right;
+    width: 60%;
+}
+
+@media only screen and (max-width: 766px) {
+    nav {
+        width: 100%;
+    }
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+}
+
+@media only screen and (max-width: 766px) {
+    nav ul {
+        padding-top: 10px;
+        margin-bottom: 22px;
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    line-height: 4.5;
+}
+
+@media only screen and (max-width: 766px) {
+    nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+}
+
+nav ul a {
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+nav ul a:hover,
+nav ul a:active {
+    color: #010101;
+    text-decoration: none;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+@media only screen and (max-width: 766px) {
+    .mobile-toggle {
+        display: block;
+    }
+}
+
+.mobile-toggle span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: #8f8f8f;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #8f8f8f;
+    background: white;
+    font-family: "Cardo", serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 2;
+    color: rgba(71, 71, 71, 0.9);
+}
+
+.content {
+    padding: 50px 2% 250px;
+}
+
+.hero {
+    position: relative;
+    background: url(http://www.philippefercha.com/cd/toggle-menu-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding-top: 110px;
+    min-height: 500px;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+.hero h1 span {
+    font-size: 25px;
+    color: #e8f380;
+    border-bottom: 2px solid #e8f380;
+    padding-bottom: 12px;
+    line-height: 3;
+}
+
+.mouse {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 46px;
+    border-radius: 13px;
+    border: 2px solid #e8f380;
+    position: absolute;
+    bottom: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -26px;
+}
+
+.mouse span {
+    display: block;
+    margin: 6px auto;
+    width: 2px;
+    height: 2px;
+    border-radius: 4px;
+    background: #e8f380;
+    border: 1px solid transparent;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+/*
+particle animation styling*/
+
+section#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section#home > .intro_text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+section#home > .intro_text > h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    text-align: center;
+    margin: 0px 0px 22px 0px;
+    color: rgba(255, 255, 255, 1);
+}
+
+section#home > .intro_text > h1 > span.highlight {
+    color: rgba(255, 205, 60, 1);
+}
+
+section#home > .intro_text > .more_about_me,
+div.myBtn {
+    width: 160px;
+    height: 50px;
+    margin: auto;
+    background: rgba(255, 205, 60, 1);
+    border: 2px solid rgba(255, 205, 60, 1);
+    transition: 0.3s ease;
+}
+
+section#home > .intro_text > .more_about_me:hover,
+div.myBtn:hover {
+    background: transparent;
+}
+
+div.myBtn:hover {
+    background: black;
+}
+
+section#home > .intro_text > p {
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin: 0px auto 48px auto;
+}
+
+section#home > .intro_text > p > span.highlight {
+    color: rgba(255, 205, 60, 1);
+}
+
+section#home > .hero_background_image {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: rgba(1, 1, 1, 1);
+}
+
+section#home > .hero_background_image > img {
+    width: 100%;
+    min-height: 100%;
+    opacity: 0.18;
+}
+
+section#home > .intro_text > .more_about_me > a,
+div.myBtn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+
+
+section#home > .intro_text > .more_about_me > a > span,
+div.myBtn span {
+    display: block;
+    padding: 14px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(1, 1, 1, 1);
+    transition: 0.3s ease;
+}
+
+section#home > .intro_text > .more_about_me > a > span:hover,
+div.myBtn span:hover {
+    color: white;
+}
+
+#particle-canvas {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+}
+
+main {
+    background: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 99;
+}
+
+main section {
+    position: relative;
+    z-index: 99;
+
+}
+
+/*about section styling*/
+
+.dflex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dflex .aboutImage,
+.dflex .aboutText {
+    width: 50%;
+    flex-grow: 1;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dflex .aboutText {
+    width: 50%;
+    flex-grow: 1;
+    padding: 65px 20px;
+}
+
+/*progress bar stylling */
+
+.progress {
+    height: 2px;
+}
+
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .6s;
+    background-color: black;
+}
+
+@keyframes animateBar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*================*/
+
+.factsSkillSet {}
+
+.fact {
+    width: 50%;
+    align-self: center;
+    padding: 10px;
+}
+
+.skillSet {
+    width: 50%;
+    margin: 0px 0px;
+}
+
+.progressBar {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: #eeeeee;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.skillSet .title {
+    position: absolute;
+    width: auto;
+    height: 5px;
+    padding-left: 0px;
+    float: left;
+    font-weight: normal;
+    top: -24px;
+    color: black;
+    z-index: 10000;
+}
+
+.progress_value {
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10000;
+    top: -25px;
+}
+
+.progress {
+    height: 5px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #f9be12;
+}
