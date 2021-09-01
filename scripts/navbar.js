@@ -2,29 +2,33 @@
 $(window).scroll(function () {
 
     if ($(window).scrollTop() > 100) {
-        $('.main_h').addClass('sticky');
+        $('.header').addClass('sticky');
+        $('.nav-link').removeClass('text-white');
+        $('#logoImg').attr('src','../img/logo.png');
     } else {
-        $('.main_h').removeClass('sticky');
+        $('.header').removeClass('sticky');
+        $(".nav-link").addClass('text-white');
+        $('#logoImg').attr('src','../img/logo_Avii.png');
     }
 });
 
 // Mobile Navigation
 $('.mobile-toggle').click(function () {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.main_h').removeClass('open-nav');
+    if ($('.header').hasClass('open-nav')) {
+        $('.header').removeClass('open-nav');
     } else {
-        $('.main_h').addClass('open-nav');
+        $('.header').addClass('open-nav');
     }
 });
 
 $('.main_h li a').click(function () {
-    if ($('.main_h').hasClass('open-nav')) {
+    if ($('.header').hasClass('open-nav')) {
         $('.navigation').removeClass('open-nav');
-        $('.main_h').removeClass('open-nav');
+        $('.header').removeClass('open-nav');
     }
 });
 
-// navigation scroll lijepo radi materem
+// navigation scroll 
 $('nav a').click(function (event) {
     var id = $(this).attr("href");
     var offset = 70;

@@ -1,7 +1,41 @@
+/*
+Main heighlight heading color,
+button border color, botton background color
+#f8bf45 //yellow
+
+*/ 
+/*
+primary fontcolor : #ffffff
+highlight primary color : #f8bf45
+*/
+/*
+body color #ffffff //white
+*/
+
+
+/*
+h1 {
+    font-size: 30px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 2;
+    color: rgba(71, 71, 71, 0.9);
+}
+*/
+/*
 .navbar{
     display: block;
 }
-.main_h {
+*/
+.header {
     position: fixed;
     top: 0px;
     max-height: 80px;
@@ -12,16 +46,13 @@
     overflow: hidden;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    opacity: 0;
-    top: -100px;
+    color: #ffffff ;
     padding-bottom: 6px;
-    font-family: "Montserrat", sans-serif;
-    background: rgba(255, 255, 255, 1);
     box-shadow: 0px 1px 5px 1px rgba(16, 16, 16, 0.05);
 }
 
 @media only screen and (max-width: 766px) {
-    .main_h {
+    .header {
         padding-top: 25px;
     }
 }
@@ -36,23 +67,11 @@
 }
 
 .sticky {
-    opacity: 1;
-    top: 0px;
-        border-bottom: 1px solid gainsboro;
+    color:#8f8f8f;
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #f8bf45;
 }
 
-.logo {
-    float: left;
-    width: 9%;
-    height: auto;
-    overflow: hidden;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-}
 
 @media only screen and (max-width: 766px) {
     .logo {
@@ -60,10 +79,6 @@
     }
 }
 
-nav {
-    float: right;
-    width: 60%;
-}
 
 @media only screen and (max-width: 766px) {
     nav {
@@ -103,16 +118,15 @@ nav ul li {
 }
 
 nav ul a {
-    color: #888888;
-    text-transform: uppercase;
-    font-size: 14px;
+/*    color: #888888;*/
+    text-transform: capitalize;
+/*    font-size: 14px;*/
     font-weight: bolder;
 }
 
 nav ul a:hover,
 nav ul a:active {
-    color: #010101;
-    text-decoration: none;
+    color: #f8bf45;
 }
 
 .mobile-toggle {
@@ -143,100 +157,12 @@ nav ul a:active {
     display: block;
 }
 
-* {
-    box-sizing: border-box;
-}
 
-body {
-    color: #8f8f8f;
-    background: white;
-    font-family: "Cardo", serif;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1 {
-    font-size: 30px;
-    line-height: 1.8;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    color: black;
-    font-weight: 600;
-}
-
-p {
-    margin-bottom: 20px;
-    font-size: 17px;
-    line-height: 2;
-    color: rgba(71, 71, 71, 0.9);
-}
 
 .content {
     padding: 50px 2% 250px;
 }
 
-.hero {
-    position: relative;
-    background: url(http://www.philippefercha.com/cd/toggle-menu-bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-    padding-top: 110px;
-    min-height: 500px;
-    letter-spacing: 2px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.hero h1 {
-    font-size: 50px;
-    line-height: 1.3;
-}
-
-.hero h1 span {
-    font-size: 25px;
-    color: #e8f380;
-    border-bottom: 2px solid #e8f380;
-    padding-bottom: 12px;
-    line-height: 3;
-}
-
-.mouse {
-    display: block;
-    margin: 0 auto;
-    width: 26px;
-    height: 46px;
-    border-radius: 13px;
-    border: 2px solid #e8f380;
-    position: absolute;
-    bottom: 40px;
-    position: absolute;
-    left: 50%;
-    margin-left: -26px;
-}
-
-.mouse span {
-    display: block;
-    margin: 6px auto;
-    width: 2px;
-    height: 2px;
-    border-radius: 4px;
-    background: #e8f380;
-    border: 1px solid transparent;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: scroll;
-    animation-name: scroll;
-}
 
 @-webkit-keyframes scroll {
     0% {
@@ -276,29 +202,30 @@ section#home {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    text-align: center;
 }
 
 section#home > .intro_text {
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 1;
+    z-index: 9;
     width: 100%;
     transform: translate(-50%, -50%);
 }
 
 section#home > .intro_text > h1 {
-    font-family: "Montserrat", sans-serif;
     font-size: 65px;
     font-weight: 500;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-align: center;
     margin: 0px 0px 22px 0px;
     color: rgba(255, 255, 255, 1);
 }
 
 section#home > .intro_text > h1 > span.highlight {
-    color: rgba(255, 205, 60, 1);
+    color: #f8bf45;
 }
 
 section#home > .intro_text > .more_about_me,
@@ -322,7 +249,7 @@ div.myBtn:hover {
 
 section#home > .intro_text > p {
     width: 80%;
-    font-family: "Montserrat", sans-serif;
+/*    font-family: "Montserrat", sans-serif;*/
     font-size: 28px;
     line-height: 42px;
     text-align: center;
@@ -331,7 +258,7 @@ section#home > .intro_text > p {
 }
 
 section#home > .intro_text > p > span.highlight {
-    color: rgba(255, 205, 60, 1);
+    color: #f8bf45;
 }
 
 section#home > .hero_background_image {
@@ -340,9 +267,9 @@ section#home > .hero_background_image {
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
-    background: rgba(1, 1, 1, 1);
+    background: rgba(1, 1, 1, 0.3);
 }
 
 section#home > .hero_background_image > img {
@@ -394,7 +321,7 @@ main {
 
 main section {
     position: relative;
-    z-index: 99;
+/*    z-index: 99;*/
 
 }
 
@@ -475,7 +402,7 @@ main section {
     font-weight: normal;
     top: -24px;
     color: black;
-    z-index: 10000;
+/*    z-index: 10000;*/
 }
 
 .progress_value {
@@ -484,7 +411,7 @@ main section {
     padding-right: 10px;
     font-weight: bold;
     color: #000000;
-    z-index: 10000;
+/*    z-index: 10000;*/
     top: -25px;
 }
 
@@ -500,17 +427,39 @@ a:hover{
 .section-padding {
 	padding: 60px 0;
 }
+
+/*social media container*/
+.social-container{
+    position: fixed;
+    width: 2%;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, 0%);
+    border: none;
+    z-index: 999;
+}
+
+.social-container a{
+    padding: 0px;
+    border: 2px solid rgba(255, 205, 60, 0);
+}
+.social-container a:hover{
+  background: transparent;
+    color: white;
+   border: 2px solid rgba(255, 205, 60, 1);
+}
+
 /*contact us*/
 .container-contact{
-     position: relative;
+    position: relative;
     z-index: 9;
-    background: url("../img/Archive/rectangle/6");
+    background: url("../img/img6.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-	.contactus {
+.contactus {
     background: #000000de;
     height: auto;
     width: 100%;
@@ -596,6 +545,25 @@ a:hover{
 .skillCard img{
    width: 70%;
     margin:0px auto;
+}
+
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
 }
 
 
